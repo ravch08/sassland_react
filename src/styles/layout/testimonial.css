@@ -1,0 +1,137 @@
+#swiper-testimonial {
+	width: 80%;
+	padding: 8rem 0;
+}
+
+#testimonial {
+	background-color: hsl(0, 0%, 100%);
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		width: 6rem;
+		height: 6rem;
+		padding: 2.6rem;
+		border-radius: 50%;
+		box-shadow: var(--box-shadow-sm);
+		background-color: hsl(0, 0%, 96%);
+
+		&::after {
+			font-size: var(--fs-body);
+			fill: var(--color-btn-secondary);
+		}
+	}
+
+	.testimonial-item {
+		width: 75%;
+		padding: 6rem;
+		height: 20rem;
+		max-height: 24rem;
+		text-align: center;
+		position: relative;
+		margin-inline: auto;
+		border-radius: 0.8rem;
+		background-size: contain;
+		box-shadow: var(--box-shadow-md);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-origin: content-box;
+		background-color: hsl(0, 0%, 98%);
+		background-image: url(../../assets/testimonial-bg.png);
+
+		figure {
+			position: absolute;
+			top: 2%;
+			left: 50%;
+			right: 50%;
+			width: 8rem;
+			transform: translate(-50%, -50%);
+		}
+
+		p {
+			font-size: var(--fs-h3);
+			font-style: italic;
+			margin-bottom: 2.5rem;
+		}
+
+		span {
+			font-weight: 600;
+			font-size: var(--fs-h4);
+			margin: 1.5rem 0 0.6rem;
+		}
+
+		small {
+			font-size: var(--fs-h5);
+			color: var(--color-Dark-100);
+		}
+	}
+}
+
+/* // ----- Notification Section ----------------------------------------------------- */
+
+#notification {
+	background: var(--color-gradient2);
+}
+
+.notification-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.content {
+		width: 60%;
+		color: var(--color-light-100);
+	}
+
+	h2 {
+		margin-bottom: 2rem;
+	}
+}
+
+/* // ----- Media Queries -------------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+	.notification-wrapper {
+		gap: 3rem;
+		flex-direction: column;
+		align-items: flex-start;
+
+		.content {
+			width: 90%;
+		}
+	}
+
+	#swiper-testimonial {
+		width: 95%;
+		padding: 6rem 0 10rem;
+	}
+
+	#testimonial {
+		background-color: lighten(var(--color-light-100, 10%));
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			top: 92%;
+		}
+
+		.swiper-button-next {
+			left: 60%;
+		}
+
+		.swiper-button-prev {
+			left: 20%;
+		}
+
+		.swiper-slide {
+			height: 24rem;
+			padding: 8rem 4rem 6rem;
+
+			p {
+				font-size: 1.6rem;
+			}
+		}
+	}
+}
